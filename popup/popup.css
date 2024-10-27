@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 500px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box {
+    width: 80px;
+    height: 80px;
+    background-color: #242424;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.time-box span {
+    color: #ffd700;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 12px;
+    color: #6b88a4; /* Light blue-grey color from your image */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animation for number changes */
+@keyframes numberChange {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.time-box span.animate {
+    animation: numberChange 0.3s ease-out;
+}
